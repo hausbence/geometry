@@ -1,7 +1,5 @@
 package com.codecool.geometry.shapes;
 
-import sun.jvm.hotspot.oops.BranchData;
-
 import java.util.Scanner;
 
 public class Circle extends Shape {
@@ -15,7 +13,9 @@ public class Circle extends Shape {
         this.radius = Double.parseDouble(radius);
     }
 
-
+    public String toString() {
+        return "Circle"  + "Radius: " + radius;
+    }
 
     @Override
     public double calculateArea() {

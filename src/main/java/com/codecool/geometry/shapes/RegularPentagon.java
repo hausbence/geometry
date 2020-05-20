@@ -13,7 +13,9 @@ public class RegularPentagon extends Shape {
         this.side = Double.parseDouble(userInput);
     }
 
-
+    public String toString() {
+        return "Pentagon, side: " + side;
+    }
 
     @Override
     public double calculateArea() {

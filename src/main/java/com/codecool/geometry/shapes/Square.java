@@ -13,6 +13,10 @@ public class Square extends Rectangle {
         this.side = Double.parseDouble(userInput);
     }
 
+    public String toString() {
+        return "Square, side = " + side;
+    }
+
     @Override
     public double calculateArea() {
         return side * side;

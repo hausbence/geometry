@@ -19,6 +19,10 @@ public class Rectangle extends Shape {
         this.side2 = Double.parseDouble(side2);
     }
 
+    public String toString() {
+        return "Rectangle, Sides: a =  " + side1 + "b = " + side2;
+    }
+
     @Override
     public double calculateArea() {
         return side1 * side2;

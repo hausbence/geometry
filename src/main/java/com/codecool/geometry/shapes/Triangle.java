@@ -30,6 +30,11 @@ public class Triangle extends Shape {
                 * (side1 + side2 - side3));
     }
 
+    public String toString() {
+        return "Triangle, Sides: a = " + side1 + "b = " + side2 + "c = " + side3
+                + ", Altitude: " + altitude;
+    }
+
     @Override
     public double calculateArea() {
         return (side1 * altitude) / 2;
