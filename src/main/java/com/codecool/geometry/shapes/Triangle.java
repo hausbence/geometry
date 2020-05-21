@@ -3,27 +3,20 @@ package com.codecool.geometry.shapes;
 import java.util.Scanner;
 
 public class Triangle extends Shape {
-    double side1;
-    double side2;
-    double side3;
-    double altitude;
+    private final double side1;
+    private final double side2;
+    private final double side3;
+    private final double altitude;
 
     /**
      * Calculates a regular triangle's area.
      * regular: every side has different lengths
      */
 
-    public Triangle() {
-        Scanner data = new Scanner(System.in);
-        System.out.println("Enter the 1st side of the triangle: ");
-        String userInput = data.nextLine();
-        System.out.println("Enter the 2nd side of the triangle: ");
-        String userInput2 = data.nextLine();
-        System.out.println("Enter the 3rd side of the triangle: ");
-        String userInput3 = data.nextLine();
-        this.side1 = Double.parseDouble(userInput);
-        this.side2 = Double.parseDouble(userInput2);
-        this.side3 = Double.parseDouble(userInput3);
+    public Triangle(double side1, double side2, double side3) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
         this.altitude = Math.sqrt((side1 + side2 + side3)
                 * (-side1 + side2 + side3)
                 * (side1 - side2 + side3)
@@ -33,6 +26,14 @@ public class Triangle extends Shape {
     public String toString() {
         return "Triangle, Sides: a = " + side1 + "b = " + side2 + "c = " + side3
                 + ", Altitude: " + altitude;
+    }
+
+    public static String getAreaFormula() {
+        return "The formula of the area: (a * altitude) / 2";
+    }
+
+    public static String getPerimeterFormula() {
+        return "The formula of the perimeter: a + b + c";
     }
 
     @Override

@@ -1,16 +1,13 @@
 package com.codecool.geometry.shapes;
 
-import java.util.Scanner;
 
 public class Square extends Rectangle {
 
-    double side;
+    private final double side;
 
-    public Square() {
-        Scanner data = new Scanner(System.in);
-        System.out.println("Enter the length of the side of the square: ");
-        String userInput = data.nextLine();
-        this.side = Double.parseDouble(userInput);
+    public Square(double side) {
+        super(side,side);
+        this.side = side;
     }
 
     public String toString() {

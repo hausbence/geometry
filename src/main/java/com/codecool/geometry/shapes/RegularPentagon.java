@@ -4,17 +4,22 @@ import java.util.Scanner;
 
 public class RegularPentagon extends Shape {
 
-    double side;
+    private final double side;
 
-    public RegularPentagon() {
-        Scanner data = new Scanner(System.in);
-        System.out.println("Enter the length of the side of the pentagon: ");
-        String userInput = data.nextLine();
-        this.side = Double.parseDouble(userInput);
+    public RegularPentagon(double side) {
+        this.side = side;
     }
 
     public String toString() {
         return "Pentagon, side: " + side;
+    }
+
+    public static String getAreaFormula() {
+        return "The formula of the area: Math.sqrt(5 * (5 + 2 * Math.sqrt(5)) * (a*a)) / 4";
+    }
+
+    public static String getPerimeterFormula() {
+        return "The formula of the perimeter: 5 * a";
     }
 
     @Override

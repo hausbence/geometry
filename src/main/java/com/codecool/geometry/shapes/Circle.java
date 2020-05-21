@@ -4,17 +4,22 @@ import java.util.Scanner;
 
 public class Circle extends Shape {
 
-    double radius;
+    private final double radius;
 
-    public Circle() {
-        Scanner data = new Scanner(System.in);
-        System.out.println("Enter the radius of the circle: ");
-        String radius = data.nextLine();
-        this.radius = Double.parseDouble(radius);
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     public String toString() {
-        return "Circle"  + "Radius: " + radius;
+        return "Circle, "  + "Radius: " + radius;
+    }
+
+    public static String getAreaFormula() {
+        return "The formula of the area: Math.PI * (radius * radius)";
+    }
+
+    public static String getPerimeterFormula() {
+        return "The formula of the perimeter: 2 * Math.PI * radius";
     }
 
     @Override
